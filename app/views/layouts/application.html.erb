@@ -2,14 +2,34 @@
 <html>
 <head>
   <title>Fequi</title>
-  <%= stylesheet_link_tag    "application" %>
+
+  <%= stylesheet_link_tag    "style" %>
   <%= javascript_include_tag "application" %>
+  <!-- <%= javascript_include_tag :defaults %> -->
   
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+
+<body>
+	<div class='main-out'>
+	 <div class='main'>	
+	  <div class="page">
+	   		<%=render "shared/header"%>	
+     
+
+       	<div class='shared_content'>
+          <!-- <% flash.each do |name, msg|%>
+            <%=content_tag :div, msg, :id => "flash_#{name}"%>
+          <%end%> -->
+           
+       		<%=yield%>
+        </div>
+        <%=render "shared/footer" %>
+      </div>
+     </div>
+
+    </div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # Use 'haml' for templates
 
@@ -16,12 +16,20 @@ gem 'haml'
 
 group :development, :test do
   gem 'ruby-debug19'
+
+  # gem 'ruby-debug-ide'
+  # gem 'ruby-debug-base19x'
+  # gem 'linecache19'
+  #gem 'debugger'
 end
 
 group :test do
 	gem 'rspec-rails'
 end
 
+# Logging
+
+gem 'log4r'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,6 +47,6 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+#To use debugger
+#gem 'ruby-debug19', :require => 'ruby-debug'
 

@@ -1,0 +1,46 @@
+
+<br/><br/>
+<div class='index_titles'><b>Show User details</b></div>
+
+<br/>
+
+<%if flash[:notice]%>
+	<p id="notice"><%= notice %></p>
+<%end%>
+<fieldset class='show'>
+
+<table>
+	<tbody>
+		<tr>
+			<td>Name: </td><td><%=@user.name%></td> 
+		</tr>	
+		<tr>
+			<td>Email: </td><td><%=@user.email%></td> 
+		</tr>
+		<tr>
+			<td>Role: </td><td><%=@user.role_id%></td> 
+		</tr>
+	</tbody>
+
+
+</table>
+
+
+<!--<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @user.role_id %>
+</fieldset></p> -->
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

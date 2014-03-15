@@ -1,0 +1,38 @@
+<br/><br/>
+<div class='index_titles'><b>Show Role details</b></div>
+<br/>
+
+<% if flash[:notice]%>
+	<p id="notice"><%= notice %></p>
+<%end%>
+
+<fieldset class='show'>
+
+<table>
+	<tbody>
+		<tr>
+			<td>Name: </td><td><%=@role.name%></td> 
+		</tr>	
+		<tr>
+			<td>Description: </td><td><%=@role.description%></td> 
+		</tr>
+		
+	</tbody>
+
+
+</table>
+
+
+<!-- <p>
+  <b>Name:</b>
+  <%= @role.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @role.description %>
+</p>
+ -->
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>

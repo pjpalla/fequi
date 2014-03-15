@@ -1,0 +1,27 @@
+
+
+<% flash.each do |name, msg|%>
+   <%=content_tag :div, msg, :id => "flash_#{name}"%>
+<%end%>
+
+
+<%= form_tag sessions_path do  %>
+  
+
+  <fieldset class='login_form'>
+
+  <fieldset>
+  <div class="field">
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email], :size => 14 %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password, '', :size => 14%>
+  </div>
+  <div id="actions_login">
+    <%= submit_tag "Login" %>
+  </div>
+<% end %>
+</fieldset>
+</fieldset>
